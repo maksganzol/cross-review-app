@@ -59,10 +59,10 @@ export default {
 			browser: true,
 			dedupe: ['svelte']
 		}),
-		commonjs(),
+		commonjs({ requireReturnsDefault: 'auto', }),
+
 		typescript({
-			sourceMap: !production,
-			inlineSources: !production
+			rootDir: "./src",
 		}),
 
 		// In dev mode, call `npm run start` once
